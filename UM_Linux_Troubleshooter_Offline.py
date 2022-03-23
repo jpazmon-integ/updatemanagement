@@ -1421,7 +1421,8 @@ def find_line_in_file(search_text, path, file_encoding=""):
         if file_encoding == "":
             current_file = open(path, "r")
         else:
-            current_file = codecs.open(path, "r", file_encoding)
+            # current_file = codecs.open(path, "r", file_encoding)
+            current_file = open(path, "r")
 
         for line in current_file:
             if search_text in line:
